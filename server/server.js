@@ -9,6 +9,9 @@ dotenv.config();
 
 //Requiring routes
 const patientAuth = require("./routes/patientAuth");
+const doctorAuth = require("./routes/doctorAuth");
+const prescription = require("./routes/prescription");
+const appointment = require("./routes/appointment");
 
 const db = process.env.MONGODB_URL;
 
@@ -30,6 +33,9 @@ app.use(cors());
 
 //Definning routes
 app.use("/patient",patientAuth);
+app.use("/doctor",doctorAuth);
+app.use("/prescription",prescription);
+app.use("/appointment",appointment);
 
 const PORT = process.env.PORT || 5000;
 
