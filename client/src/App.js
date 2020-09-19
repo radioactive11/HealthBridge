@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 //Importing Pages
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
+import Profile from "./pages/Profile";
 import Dashboard from "./pages/Dashboard";
 import Home from "./pages/Home";
 
@@ -17,6 +18,7 @@ import Heart from "./pages/services/Heart";
 import Pneumonia from "./pages/services/Pneumonia";
 import Cancer from "./pages/services/Cancer";
 import Covid from "./pages/services/Covid";
+import DashboardDoc from "./pages/DashboardDoc";
 
 const App = () => {
 	return (
@@ -31,6 +33,7 @@ const App = () => {
 						component={Dashboard}
 					/>
 					<Route path="/signup" exact component={SignUp} />
+					<PrivateRoute path="/profile" exact component={Profile} />
 					<Route path="/login" exact component={Login} />
 					<PrivateRoute
 						path="/dashboard/cancer"
@@ -61,6 +64,12 @@ const App = () => {
 						path="/dashboard/covid"
 						exact
 						component={Covid}
+					/>
+					<PrivateRoute
+						path="/dashboardDoc"
+						exact
+						doc
+						component={DashboardDoc}
 					/>
 				</Switch>
 				<Footer />

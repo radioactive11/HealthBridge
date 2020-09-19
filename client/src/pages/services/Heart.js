@@ -9,21 +9,26 @@ const Cancer = () => {
 
 	const [age, setAge] = useState(null);
 	const [bp, setBp] = useState(null);
-	const [hbr,setHbr] = useState(null);
+	const [fps, setFps] = useState(null);
 	const [chol, setChol] = useState(null);
 	const [sex, setSex] = useState(null);
 
 	const getResults = () => {
-		Axios.post(`${process.env.REACT_APP_API_URL}/predict/heart`, {
-				age,
-				bp,
-				hbr,
-				chol,
-				sex
-			},{
-			headers: {
-				Authorization: "Bearer " + token,
-			},
+		Axios.post(`https://eureka-heart.herokuapp.com//heart`, {
+			age,
+			sex,
+			cp: 0,
+			trestbps: 0,
+			chol,
+			fbs: fps,
+			bps: bp,
+			restecg: 0,
+			thalach: 0,
+			exang: 1,
+			oldpeak: 1,
+			slope: 1,
+			ca: 1,
+			thal: 1,
 		})
 			.then((res) => {
 				console.log(res.data, "ok");
@@ -40,7 +45,8 @@ const Cancer = () => {
 				<div>
 					<h1>Heart Health Prediction</h1>
 					<p className="content">
-						Patients can know the health of their heart by providing very basic details.
+						Patients can know the health of their heart by providing
+						very basic details.
 					</p>
 				</div>
 				<div className="heart-form">
@@ -65,28 +71,28 @@ const Cancer = () => {
 						value={chol}
 						onChange={(e) => setChol(e.target.value)}
 					/>
-					<label htmlFor="hbr">Heart Beat Rate</label>
+					<label htmlFor="hbr">Sugar</label>
 					<input
 						type="text"
 						id="hbr"
-						value={hbr}
-						onChange={(e) => setHbr(e.target.value)}
+						value={fps}
+						onChange={(e) => setFps(e.target.value)}
 					/>
 
 					<label htmlFor="sex">Sex</label>
-					<input
-						type="text"
-						id="sex"
+					<select
+						name="blood_grp"
 						value={sex}
-						onChange={(e) => setSex(e.target.value)}
-					/>
-
+						onChange={(e) => setSex(e.target.value)}>
+						<option value="1">Male</option>
+						<option value="0">Female</option>
+					</select>
 					<button className="primary" onClick={() => getResults()}>
-						Book
+						Get Result
 					</button>
 				</div>
 				<div className="result">
-					<h3>{result && result.heart_status}</h3>
+					<h3>{result && result.result}</h3>
 				</div>
 			</div>
 		</div>

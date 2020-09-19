@@ -4,10 +4,11 @@ import Dropzone from "react-dropzone";
 
 const Cancer = () => {
 	const [result, setResult] = useState(null);
+	const [files, setFiles] = useState(null);
 
-	const getResults = (files) => {
+	const getResults = () => {
 		const formData = new FormData();
-		formData.append("images", files[0]);
+		formData.append("images", files[files.length - 1]);
 		Axios.post(
 			`https://eureka-api-radioactive11.herokuapp.com/cancer`,
 			formData
@@ -32,7 +33,10 @@ const Cancer = () => {
 					</p>
 				</div>
 				<Dropzone
-					onDrop={(files) => getResults(files)}
+					onDrop={(files) => {
+						setFiles(files);
+						console.log(files);
+					}}
 					accept="image/*"
 					minSize={1024}
 					maxSize={3072000}>
@@ -63,11 +67,16 @@ const Cancer = () => {
 						);
 					}}
 				</Dropzone>
+				{files && (
+					<div className="selected-file">
+						Selected File : {files[files.length - 1].name}
+					</div>
+				)}
 				<button className="primary" onClick={() => getResults()}>
 					Get results
 				</button>
 				<div className="result">
-					<h3>{result && JSON.stringify(result)}</h3>
+					<h3>{result && result.cancer}</h3>
 				</div>
 			</div>
 		</div>
