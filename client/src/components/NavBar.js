@@ -19,7 +19,7 @@ const NavBar = ({ history }) => {
 		<div className="NavBar">
 			<div className="logo">
 				<div onClick={() => history.push("/")}>
-					<h1>eUreka</h1>
+					<h1>HealthBridge</h1>
 				</div>
 			</div>
 			<div className="links">

@@ -23,7 +23,7 @@ const Home = ({ history }) => {
 						<h3 className="welcome">
 							Welcome to{" "}
 							<div className="logo">
-								<h1>eUreka</h1>
+								<h1>HealthBridge</h1>
 							</div>
 						</h3>
 						<p>

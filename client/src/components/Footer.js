@@ -5,7 +5,7 @@ const Footer = () => {
 		<div className="Footer">
 			<div className="text">
 				Made with <span role="img">💖</span> by{" "}
-				<a href="#">eUreka Team</a>
+				<a href="#">Hack Overflow Team</a>
 			</div>
 		</div>
 	);

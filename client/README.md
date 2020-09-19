@@ -1,3 +1,3 @@
-# Eureka Frontend
+# HealthBridge Frontend
 
 Made using ReactJS + Recoil

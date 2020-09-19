@@ -72,7 +72,7 @@ const Dashboard = () => {
 					))}
 					<div
 						className="card"
-						onClick={() => window.open("https://google.com")}>
+						onClick={() => window.open("https://ambulance-on-demand.vercel.app/")}>
 						<div className="image">
 							<img
 								src={require("../assets/icons/ambulance.png")}
