@@ -11,9 +11,12 @@ import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 
 import PrivateRoute from "./components/PrivateRoute";
-import Cancer from "./pages/services/Cancer";
+import Appointment from "./pages/services/Appointment";
 import Medicine from "./pages/services/Medicine";
+import Heart from "./pages/services/Heart";
 import Pneumonia from "./pages/services/Pneumonia";
+import Cancer from "./pages/services/Cancer";
+import Covid from "./pages/services/Covid";
 
 const App = () => {
 	return (
@@ -43,6 +46,21 @@ const App = () => {
 						path="/dashboard/medicine"
 						exact
 						component={Medicine}
+					/>
+					<PrivateRoute
+						path="/dashboard/doctor"
+						exact
+						component={Appointment}
+					/>
+					<PrivateRoute
+						path="/dashboard/heart"
+						exact
+						component={Heart}
+					/>
+					<PrivateRoute
+						path="/dashboard/covid"
+						exact
+						component={Covid}
 					/>
 				</Switch>
 				<Footer />
