@@ -12,6 +12,8 @@ import Footer from "./components/Footer";
 
 import PrivateRoute from "./components/PrivateRoute";
 import Cancer from "./pages/services/Cancer";
+import Medicine from "./pages/services/Medicine";
+import Pneumonia from "./pages/services/Pneumonia";
 
 const App = () => {
 	return (
@@ -31,6 +33,16 @@ const App = () => {
 						path="/dashboard/cancer"
 						exact
 						component={Cancer}
+					/>
+					<PrivateRoute
+						path="/dashboard/pneumonia"
+						exact
+						component={Pneumonia}
+					/>
+					<PrivateRoute
+						path="/dashboard/medicine"
+						exact
+						component={Medicine}
 					/>
 				</Switch>
 				<Footer />
