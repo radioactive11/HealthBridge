@@ -99,3 +99,12 @@ module.exports.dashboard = (req,res) => {
         res.status(422).json(err);
     })
 }
+
+module.exports.getAllDoctors = (req,res) => {
+    Doctor.find({})
+    .then((doctor) => {
+        res.status(200).json(doctor);
+    }).catch((err) => {
+        res.status(422).json(err);
+    })
+}

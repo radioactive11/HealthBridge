@@ -4,7 +4,8 @@ const requireDoctorLogin = require("../middleware/requireDoctorLogin");
 const {
     signup,
     signin,
-    dashboard
+    dashboard,
+    getAllDoctors
 } = require("../controllers/doctorAuth");
 const { body } = require("express-validator");
 
@@ -30,4 +31,5 @@ router.post(
 
 router.get("/dashboard",requireDoctorLogin,dashboard);
 
+routes.get("/",getAllDoctors);
 module.exports = router;
