@@ -3,7 +3,8 @@ import  pandas as pd
 import pickle
 
 
-def main(age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal):
+
+def helth(age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal):
     ENTRY_DICT = {
         "age": age,
         "sex": sex,
