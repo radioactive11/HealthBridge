@@ -38,6 +38,8 @@
 ## Table of Contents
 
 * [About the Project](#about-the-project)
+  * [Predictions](#predictions)
+  * [Ambulance on Demand](#ambulance-on-demand)
   * [Built With](#built-with)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
@@ -87,7 +89,23 @@ The aim of **Project HealthBridge** is to make the interaction of patients and d
 
 For detailed descriiption of the services, plese visit the [useage](#usage) section
 
-### Built With
+<br />
+
+
+## Predictions
+
+We used Tensorflow to train a CNN which predicts Pneumonnia (from chest-xrays) and Breast Cancer (from cell images) with accuracy of 97% and 92% respectively.
+
+
+<br />
+
+## Ambulance on Demand
+
+A MERN Web App in which patients can make requests to the ambulance person in real time and depending upon the patient's location, the nearby ambulance will respond to the patients' request.
+
+<br />
+
+## Built With
 
 </br>
 <p float = "left">
@@ -123,38 +141,81 @@ To get a local copy up and running follow these simple example steps.
 * Python 3.6+
 
 
-### Installation
+### Installation 
+
+<br />
+
+#### Flask API
+<br />
 
 1. Clone the repo 
 ```sh
-git clone https://github.com/radioactive11/project-HealthBridge
+git clone https://github.com/radioactive11/HealthBridge
 ```
 
-2. Install node requirements
-```sh
-npm install
-```
-
-3. Install python packages
+2. Install requirements
 ```sh
 pip3 install -r requirements.txt
 ```
 
-4. Start React server (by default at `localhost:3000`)
+3. Start Flask server (by default at `localhost:5555`)
 ```sh
-nodemon run dev
+cd ML
+python3 app.py
 ```
 
-5. Start Node server (by default at `localhost:4000`)
+<br />
+
+#### Node & React 
+
+<br />
+
+1. Clone the repo 
+```sh
+git clone https://github.com/radioactive11/HealthBridge
+```
+
+2. Install requirements (server)
+```sh
+cd server
+npm install
+```
+
+3. Start Node server (by default at `localhost:5000`)
 ```sh
 npm run dev
 ```
 
-6. Start Flask server (by default at `localhost:5000`)
+4. Install requirements (client)
 ```sh
-python3 app.py
+cd ../client
+npm install
 ```
 
+5. Start React server (by default at `localhost:3000`)
+```sh
+npm start
+```
+
+<br />
+
+
+#### Ambulance on Demand
+
+
+<br />
+
+1. Clone the repo 
+```sh
+git clone https://github.com/radioactive11/HealthBridge
+```
+2. Do ```npm run dev ```to run the development server.
+
+3. Now go to http://localhost:3000 and set your own location as patient and make request to the ambulance.
+
+4. Open http://localhost:3000/01 , http://localhost:3000/02 till 04 in other tabs .
+
+5. The nearby ambulance will receive the requests and thus requests can be accepted from there.
 
 <!-- USAGE EXAMPLES -->
 ## Usage
@@ -215,11 +276,11 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Arijit Roy - [GitHub](https://twitter.com/your_username) - email@example.com
+Arijit Roy - [GitHub](https://github.com/radioactive11) - email@example.com
 
-Kartik Goel - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Kartik Goel - [GitHub](https://github.com/kg-kartik) - email@example.com
 
-Aman Jagdev - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Aman Jagdev - [GitHub](https://github.com/amanjagdev) - email@example.com
 
 Website: [https://eureka-web.vercel.app/medicine](https://eureka-web.vercel.app/)
 
