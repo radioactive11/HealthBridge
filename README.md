@@ -2,7 +2,6 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
 
 
 
@@ -21,10 +20,10 @@
   <p align="center">
     Bridging the gap between Patients and Doctors 
     <br />
-    <a href="https://github.com/radiaoctive11/HealthBridge"><strong>Visit the website »</strong></a>
+    <a href="https://eureka-web.vercel.app"><strong>Visit the website »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/radiaoctive11/HealthBridge">View Demo</a>
+    <a href="https://eureka-web.vercel.app">View Demo</a>
     ·
     <a href="https://github.com/radiaoctive11/HealthBridge/issues">Report Bug</a>
     ·
@@ -265,11 +264,6 @@ Contributions are what make the open source community such an amazing place to b
 5. Open a Pull Request
 
 
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
 
 
 
