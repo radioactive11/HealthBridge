@@ -50,7 +50,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-The aim of **Project HealthBridge** is to make the interaction of patients and doctors **seamless**, **convinient** and **more organized**. This platform is built keeping in mind the problems and hassles one has to face while using any medical facility via hospitals.
+The aim of **Project HealthBridge** is to make the interaction of patients and doctors **seamless**, **convenient** and **more organized**. This platform is built keeping in mind the problems and hassles one has to face while using any medical facility via hospitals.
 
 :face_with_thermometer: **Here's what we provide for patients**: 
 
@@ -79,7 +79,7 @@ The aim of **Project HealthBridge** is to make the interaction of patients and d
 
 :exclamation: Prioritized lab results for disease infected patients 
 
-For detailed descriiption of the services, plese visit the [useage](#usage) section
+For detailed descriiption of the services, plese visit the [usage](#usage) section
 
 <br />
 
