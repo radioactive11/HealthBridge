@@ -269,7 +269,7 @@ Kartik Goel - [GitHub](https://github.com/kg-kartik) - goel.kartik39@gmail.com
 
 Aman Jagdev - [GitHub](https://github.com/amanjagdev) - amankumarjagdev@gmail.com
 
-Website: [https://eureka-web.vercel.app/medicine](https://eureka-web.vercel.app/)
+Website: [https://eureka-web.vercel.app/](https://eureka-web.vercel.app/)
 
 
 <p align = "center" >Made with :purple_heart: for :india: </p>
