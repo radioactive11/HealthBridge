@@ -9,6 +9,7 @@ const NavBar = ({ history }) => {
 	const url = String(history.location.pathname);
 
 	const logOut = () => {
+		history.push("/");
 		setUser(null);
 		setToken(null);
 		localStorage.removeItem("user");

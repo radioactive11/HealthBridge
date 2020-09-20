@@ -12,9 +12,8 @@ const Login = ({ history }) => {
 	const [selected, setSelected] = useState("user");
 
 	var env = process.env.REACT_APP_API_URL;
-	if(!env) {
-		env = "http://localhost:5000"
-	}
+	console.log(env);
+
 
 	const handleLoginUser = () => {
 		Axios.post(`${env}/patient/signin`, {

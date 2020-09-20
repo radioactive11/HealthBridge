@@ -15,9 +15,40 @@ const Appointment = () => {
 	const [bloodGroup, setBloodGroup] = useState(user.bloodGroup);
 
 	const token = useRecoilValue(tokenAtom);
-	console.log(user);
 
-	const updateProfile = () => {};
+	const updateProfile = () => {
+		const dataTemp = {
+			name: fullname,
+			email,
+			phone: phno,
+			age,
+			bloodGroup,
+			address,
+		};
+		let updatedProfile;
+		if (password === "") {
+			updatedProfile = dataTemp;
+		} else {
+			updatedProfile = { ...dataTemp, password };
+		}
+		Axios.post(
+			`${process.env.REACT_APP_API_URL}/patient/update`,
+			updatedProfile,
+			{
+				headers: {
+					Authorization: "Bearer " + token,
+				},
+			}
+		)
+			.then((res) => {
+				console.log(res.data);
+				setUser(res.data);
+				localStorage.setItem("user", JSON.stringify(res.data));
+			})
+			.catch((err) => {
+				console.error(err);
+			});
+	};
 
 	return (
 		<div className="Profile">
