@@ -28,7 +28,7 @@ const Appointment = () => {
 			.catch((err) => {
 				console.error(err);
 			});
-	});
+	},[]);
 
 	const handleAppointment = () => {
 		Axios.post(

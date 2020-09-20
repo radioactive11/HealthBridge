@@ -1,0 +1,840 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+* {
+	font-family: "Poppins";
+	margin: 0;
+	padding: 0;
+}
+
+$primary: #7654ff;
+$secondary: #c8baff;
+$roayal: #5271ff;
+$red: #ff5e5e;
+$yellow: #ffc56d;
+$green: #7ed957;
+$green: #00ba4e;
+$blue: #38b6ff;
+
+.App {
+	background: white;
+}
+
+.logo {
+	h1 {
+		font-size: 25px;
+		color: $primary;
+	}
+}
+
+.dropzone {
+	text-align: center;
+	padding: 20px;
+	border: 3px dashed #eeeeee;
+	background-color: #fafafa;
+	color: #bdbdbd;
+	outline: none;
+	margin-bottom: 20px;
+}
+
+.accept {
+	border-color: #107c10 !important;
+}
+
+.reject {
+	border-color: #d83b01 !important;
+}
+
+//General
+input:not(.date-pick) {
+	padding: 10px;
+	outline: none;
+	border: none;
+	background: #e7e7e7;
+	border-radius: 10px;
+	width: 300px;
+	margin: 7px 0;
+}
+input:focus {
+	border: 1px solid $primary;
+}
+select {
+	padding: 10px;
+	outline: none;
+	border: none;
+	background: #e7e7e7;
+	border-radius: 10px;
+	width: 320px;
+	margin: 7px 0;
+}
+label {
+	margin-top: 5px;
+	width: 100%;
+	margin-left: 10px;
+	color: $primary;
+}
+button.primary {
+	outline: none;
+	border: none;
+	background: $primary;
+	padding: 10px 20px;
+	color: white;
+	border-radius: 10px;
+}
+.container {
+	margin: 20px 15%;
+}
+
+.cards {
+	margin-top: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	.card {
+		width: 40%;
+		padding: 20px;
+		margin: 10px;
+		box-shadow: 0px 0px 24px -12px rgba(0, 0, 0, 0.75);
+		border-radius: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		img {
+			height: 100px;
+			margin-right: 20px;
+		}
+		.content {
+			p {
+				color: #575757;
+			}
+		}
+	}
+	button {
+		color: white;
+		background: $green;
+	}
+}
+
+.error-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.error {
+		color: $red;
+		border-radius: 20px;
+		text-align: center;
+		padding: 10px;
+		width: 70%;
+		border: solid 1px $red;
+		background: lighten($color: $red, $amount: 20);
+	}
+}
+.NavBar {
+	padding: 10px 15%;
+	display: grid;
+	align-items: center;
+	grid-template-columns: 3fr 1fr;
+	box-shadow: 0px 0px 24px -12px rgba(0, 0, 0, 0.75);
+
+	.links {
+		display: grid;
+		gap: 0 20px;
+		grid-template-columns: 1fr 1fr 1fr;
+		.link {
+			cursor: pointer;
+			max-width: max-content;
+			user-select: none;
+		}
+		.selected {
+			color: $primary;
+			border-bottom: 2px solid $primary;
+		}
+	}
+	.logo {
+		cursor: pointer;
+	}
+}
+
+.Footer {
+	box-shadow: 0px 0px 24px -12px rgba(0, 0, 0, 0.75);
+	display: flex;
+	background: #fff;
+	margin-top: 30px;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	padding: 20px;
+	justify-content: center;
+	a {
+		text-decoration: none;
+		color: $primary;
+	}
+}
+
+.Home {
+	margin-bottom: 80px;
+	.top {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		margin-top: 50px;
+		.left {
+			.welcome {
+				display: flex;
+				align-items: center;
+				.logo {
+					margin-left: 5px;
+					margin-bottom: 5px;
+				}
+			}
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			.cta {
+				margin-top: 20px;
+			}
+			text-align: center;
+		}
+		.right {
+			text-align: center;
+			img {
+				width: 300px;
+			}
+		}
+	}
+	.middle {
+		margin-top: 50px;
+		h2 {
+			color: $primary;
+		}
+		.cards {
+			justify-content: space-around;
+			text-align: center;
+			.card {
+				width: 23%;
+				p {
+					margin: 7px 10px;
+					font-size: 14px;
+				}
+				flex-direction: column;
+			}
+		}
+	}
+}
+
+.SignUp {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	height: 90vh;
+	img {
+		width: 300px;
+	}
+	.left-bar {
+		.top {
+			text-align: center;
+			margin-bottom: 80px;
+		}
+		padding: 5%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		p {
+			color: #575757;
+			margin: 10px 100px;
+			text-align: center;
+		}
+	}
+	.main-signup {
+		margin: 10% auto;
+		h1 {
+			text-align: center;
+		}
+		.signup-form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 30px;
+			width: max-content;
+			margin: 0 auto 30px auto;
+			border-radius: 20px;
+			button {
+				margin-top: 20px;
+			}
+		}
+	}
+}
+.Login {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	height: 90vh;
+	img {
+		width: 300px;
+	}
+	.left-bar {
+		.top {
+			text-align: center;
+			margin-bottom: 80px;
+		}
+		padding: 5%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		p {
+			color: #575757;
+			margin: 10px 100px;
+			text-align: center;
+		}
+	}
+	.main-login {
+		margin: 10% auto;
+		h1 {
+			text-align: center;
+		}
+		.login-form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 30px;
+			width: max-content;
+			margin: 30px auto;
+			border-radius: 20px;
+			button {
+				margin-top: 20px;
+			}
+		}
+	}
+}
+
+.selector-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+	.selector {
+		button {
+			outline: none;
+			border: none;
+			background: $secondary;
+			padding: 10px 20px;
+			color: $primary;
+		}
+		.left {
+			border-radius: 20px 0 0 20px;
+		}
+		.right {
+			border-radius: 0 20px 20px 0;
+		}
+		#selected {
+			background: $primary;
+			color: white;
+		}
+	}
+}
+
+.Cancer {
+	.container {
+		height: 70vh;
+		display: flex;
+		text-align: center;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		h1,
+		h3 {
+			color: $red;
+		}
+		p {
+			margin-top: 20px;
+		}
+	}
+	button {
+		background: $red;
+	}
+}
+
+.Pneumonia {
+	.container {
+		height: 70vh;
+		display: flex;
+		text-align: center;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		h1,
+		h3 {
+			color: $yellow;
+		}
+		p {
+			margin-top: 20px;
+		}
+		button {
+			background: $yellow;
+		}
+	}
+}
+
+.Medicine {
+	.container {
+		min-height: 70vh;
+		margin-bottom: 100px;
+		display: flex;
+		justify-content: space-around;
+		text-align: center;
+		align-items: center;
+		flex-direction: column;
+		h1,
+		h3,
+		label {
+			color: $blue;
+		}
+		button {
+			background: $blue;
+		}
+		p {
+			margin-top: 20px;
+		}
+		.top {
+			margin: 40px 0;
+		}
+		.main {
+			border-radius: 20px;
+			padding: 30px;
+			box-shadow: 0px 0px 24px -12px rgba(0, 0, 0, 0.75);
+			width: 80%;
+			min-width: max-content;
+			.entered-name {
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+			}
+			button {
+				margin: 20px 0;
+			}
+			.commons {
+				display: flex;
+				label {
+					margin: 30px 0;
+					font-size: 18px;
+					font-weight: 600;
+				}
+				flex-direction: column;
+				table {
+					width: 100%;
+					th,
+					td {
+						padding: 10px;
+						border-bottom: 1px solid $blue;
+					}
+					text-align: left;
+				}
+			}
+		}
+	}
+}
+
+.Appointment {
+	display: flex;
+	text-align: center;
+	flex-direction: column;
+	margin-bottom: 50px;
+	justify-content: space-around;
+	align-items: center;
+	h1,
+	h3,
+	label {
+		color: $green;
+	}
+	p {
+		margin-top: 20px;
+	}
+
+	.main {
+		margin-top: 35px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	.appointment-form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 30px;
+		width: max-content;
+		margin: 30px auto;
+		border-radius: 20px;
+		button {
+			margin-top: 20px;
+			background: $green;
+		}
+	}
+	.cards {
+		justify-content: center;
+		.card {
+			flex-direction: column;
+			width: 70%;
+		}
+		.pres {
+			margin-top: 15px;
+			color: $green;
+			font-weight: 600;
+		}
+		.pres-cont {
+			margin: 0;
+		}
+	}
+}
+
+.Heart {
+	display: flex;
+	text-align: center;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	margin-bottom: 70px;
+	h1,
+	h3,
+	label {
+		color: $red;
+	}
+	p {
+		margin-top: 20px;
+	}
+	.heart-form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 30px;
+		width: max-content;
+		margin: 30px auto;
+		border-radius: 20px;
+		button {
+			margin-top: 20px;
+			background: $red;
+		}
+	}
+}
+.Dashboard {
+	margin-bottom: 80px !important;
+	.card {
+		cursor: pointer;
+	}
+	margin-bottom: 50px;
+}
+.DashboardDoc {
+	margin-bottom: 80px;
+	.card {
+		width: max-content;
+		display: block;
+		flex-direction: column;
+		.content {
+			margin-left: 5px;
+			margin-bottom: 5px;
+		}
+		.prescribe-input {
+			margin-top: 15px;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+	button {
+		margin-top: 10px;
+		background: $primary;
+	}
+	.head {
+		color: $primary;
+		font-weight: 600;
+		font-size: 18px;
+		margin-left: 5px;
+	}
+	.prescribed {
+		margin-left: 5px;
+		color: #585858;
+	}
+	.edit-prescribe {
+		display: flex;
+		img {
+			margin-left: 10px;
+			width: 20px;
+			height: 20px;
+		}
+	}
+}
+
+.box {
+	display: flex;
+	margin: 15px 0 7px 0;
+	.box1,
+	.box2,
+	.box3 {
+		width: 100px;
+		height: 4px;
+		background: $primary;
+		border-radius: 20px;
+		margin-left: 5px;
+	}
+	.box2 {
+		width: 30px;
+	}
+	.box3 {
+		width: 10px;
+	}
+}
+
+.Covid {
+	display: flex;
+	text-align: center;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	margin-bottom: 70px;
+	h1,
+	h3,
+	label {
+		color: $roayal;
+	}
+	button {
+		background: $roayal;
+	}
+	p {
+		margin-top: 20px;
+	}
+	.main {
+		margin-top: 35px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	.plasma-form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 30px;
+		width: max-content;
+		margin: 30px auto;
+		border-radius: 20px;
+		button {
+			margin-top: 20px;
+		}
+	}
+	.cards {
+		margin-top: 0;
+		justify-content: center;
+		flex-direction: column-reverse;
+		.card {
+			width: 80%;
+			.content {
+				flex: 2;
+				border-left: solid 1px $red;
+			}
+			.bg {
+				color: $red;
+				flex: 1;
+				font-size: 38px;
+			}
+			p {
+				margin: 0;
+			}
+		}
+	}
+	.scroll-view {
+		margin-top: 50px;
+		height: 55vh;
+		overflow-y: scroll;
+		overflow-x: hidden;
+		background: /* Shadow covers */ linear-gradient(
+				white 30%,
+				rgba(255, 255, 255, 0)
+			),
+			linear-gradient(rgba(255, 255, 255, 0), white 70%) 0 100%,
+			/* Shadows */
+				radial-gradient(
+					50% 0,
+					farthest-side,
+					rgba(0, 0, 0, 0.2),
+					rgba(0, 0, 0, 0)
+				),
+			radial-gradient(
+					50% 100%,
+					farthest-side,
+					rgba(0, 0, 0, 0.2),
+					rgba(0, 0, 0, 0)
+				)
+				0 100%;
+		background: /* Shadow covers */ linear-gradient(
+				white 30%,
+				rgba(255, 255, 255, 0)
+			),
+			linear-gradient(rgba(255, 255, 255, 0), white 70%) 0 100%,
+			/* Shadows */
+				radial-gradient(
+					farthest-side at 50% 0,
+					rgba(0, 0, 0, 0.2),
+					rgba(0, 0, 0, 0)
+				),
+			radial-gradient(
+					farthest-side at 50% 100%,
+					rgba(0, 0, 0, 0.2),
+					rgba(0, 0, 0, 0)
+				)
+				0 100%;
+		background-repeat: no-repeat;
+		background-color: white;
+		background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+		/* Opera doesn't support this in the shorthand */
+		background-attachment: local, local, scroll, scroll;
+	}
+}
+.scroll-view::-webkit-scrollbar {
+	width: 8px;
+	border-radius: 20px;
+}
+
+.scroll-view::-webkit-scrollbar-track {
+	border-radius: 20px;
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.scroll-view::-webkit-scrollbar-thumb {
+	border-radius: 20px;
+	background-color: $roayal;
+	width: 6px;
+}
+
+.Profile {
+	display: flex;
+	text-align: center;
+	flex-direction: column;
+	margin-bottom: 50px;
+	justify-content: space-around;
+	align-items: center;
+	h1,
+	h3,
+	label {
+		color: $primary;
+	}
+	p {
+		margin-top: 20px;
+	}
+
+	.main {
+		margin-top: 35px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	.appointment-form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 30px;
+		width: max-content;
+		border-radius: 20px;
+		margin: 0 auto;
+		button {
+			margin-top: 20px;
+			background: $primary;
+		}
+	}
+	.cards {
+		justify-content: center;
+		.card {
+			flex-direction: column;
+			width: 70%;
+			.content {
+				.name {
+					color: $primary;
+					font-size: 25px;
+					font-weight: 600;
+				}
+				color: #3b3b3b;
+			}
+		}
+	}
+}
+
+.Appointment,
+.Profile,
+.Covid {
+	.container {
+		width: 70%;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.NavBar {
+		grid-template-columns: 1fr;
+		padding: 10px 10%;
+		align-content: center;
+		h1 {
+			text-align: center;
+			margin-bottom: 10px;
+		}
+		.links {
+			margin-top: 10px;
+			margin-bottom: 10px;
+			align-items: center;
+			justify-items: center;
+		}
+	}
+	.container {
+		margin: 30px 7%;
+	}
+	.card {
+		width: 100% !important;
+	}
+	.SignUp {
+		grid-template-columns: 1fr;
+		.left-bar {
+			display: none;
+		}
+		.main-signup {
+			margin: 50px auto;
+		}
+	}
+	.Login {
+		grid-template-columns: 1fr;
+		.left-bar {
+			display: none;
+		}
+		.main-signup {
+			margin: 50px auto;
+		}
+	}
+	.Home {
+		.top {
+			grid-template-columns: 1fr;
+			grid-gap: 40px;
+			.left {
+				grid-row: 2;
+			}
+		}
+		.middle {
+			h2 {
+				text-align: center;
+			}
+		}
+	}
+	.Appointment {
+		.card {
+			text-align: center;
+		}
+	}
+	.DashboardDoc {
+		.card {
+			margin: 10px 0;
+		}
+	}
+	.main {
+		grid-template-columns: 1fr !important;
+	}
+	.plasma-submit {
+		margin-top: 80px;
+	}
+	.Appointment,
+	.Profile,
+	.Covid {
+		.container {
+			width: auto;
+		}
+	}
+}

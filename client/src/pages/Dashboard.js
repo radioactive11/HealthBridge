@@ -72,7 +72,7 @@ const Dashboard = () => {
 					))}
 					<div
 						className="card"
-						onClick={() => window.open("https://google.com")}>
+						onClick={() => window.open("https://ambulance-on-demand.vercel.app")}>
 						<div className="image">
 							<img
 								src={require("../assets/icons/ambulance.png")}
@@ -82,8 +82,7 @@ const Dashboard = () => {
 						<div className="content">
 							<h4>Ambulance</h4>
 							<p>
-								Lorem ipsum dolor sit amet consectetur,
-								adipisicing elit. Fugiat, deleniti?
+								A service to provide low latency and live location based ambulance service on demand.
 							</p>
 						</div>
 					</div>

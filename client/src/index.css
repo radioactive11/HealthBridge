@@ -1,0 +1,1139 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+* {
+  font-family: "Poppins";
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  background: white;
+}
+
+.logo h1 {
+  font-size: 25px;
+  color: #7654ff;
+}
+
+.dropzone {
+  text-align: center;
+  padding: 20px;
+  border: 3px dashed #eeeeee;
+  background-color: #fafafa;
+  color: #bdbdbd;
+  outline: none;
+  margin-bottom: 20px;
+}
+
+.accept {
+  border-color: #107c10 !important;
+}
+
+.reject {
+  border-color: #d83b01 !important;
+}
+
+input:not(.date-pick) {
+  padding: 10px;
+  outline: none;
+  border: none;
+  background: #e7e7e7;
+  border-radius: 10px;
+  width: 300px;
+  margin: 7px 0;
+}
+
+input:focus {
+  border: 1px solid #7654ff;
+}
+
+select {
+  padding: 10px;
+  outline: none;
+  border: none;
+  background: #e7e7e7;
+  border-radius: 10px;
+  width: 320px;
+  margin: 7px 0;
+}
+
+label {
+  margin-top: 5px;
+  width: 100%;
+  margin-left: 10px;
+  color: #7654ff;
+}
+
+button.primary {
+  outline: none;
+  border: none;
+  background: #7654ff;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 10px;
+}
+
+.container {
+  margin: 20px 15%;
+}
+
+.cards {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+.cards .card {
+  width: 40%;
+  padding: 20px;
+  margin: 10px;
+  -webkit-box-shadow: 0px 0px 24px -12px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 24px -12px rgba(0, 0, 0, 0.75);
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.cards .card img {
+  height: 100px;
+  margin-right: 20px;
+}
+
+.cards .card .content p {
+  color: #575757;
+}
+
+.cards button {
+  color: white;
+  background: #00ba4e;
+}
+
+.error-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.error-container .error {
+  color: #ff5e5e;
+  border-radius: 20px;
+  text-align: center;
+  padding: 10px;
+  width: 70%;
+  border: solid 1px #ff5e5e;
+  background: #ffc4c4;
+}
+
+.NavBar {
+  padding: 10px 15%;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: 3fr 1fr;
+      grid-template-columns: 3fr 1fr;
+  -webkit-box-shadow: 0px 0px 24px -12px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 24px -12px rgba(0, 0, 0, 0.75);
+}
+
+.NavBar .links {
+  display: -ms-grid;
+  display: grid;
+  gap: 0 20px;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+.NavBar .links .link {
+  cursor: pointer;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.NavBar .links .selected {
+  color: #7654ff;
+  border-bottom: 2px solid #7654ff;
+}
+
+.NavBar .logo {
+  cursor: pointer;
+}
+
+.Footer {
+  -webkit-box-shadow: 0px 0px 24px -12px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 24px -12px rgba(0, 0, 0, 0.75);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #fff;
+  margin-top: 30px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Footer a {
+  text-decoration: none;
+  color: #7654ff;
+}
+
+.Home {
+  margin-bottom: 80px;
+}
+
+.Home .top {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  margin-top: 50px;
+}
+
+.Home .top .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.Home .top .left .welcome {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Home .top .left .welcome .logo {
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+
+.Home .top .left .cta {
+  margin-top: 20px;
+}
+
+.Home .top .right {
+  text-align: center;
+}
+
+.Home .top .right img {
+  width: 300px;
+}
+
+.Home .middle {
+  margin-top: 50px;
+}
+
+.Home .middle h2 {
+  color: #7654ff;
+}
+
+.Home .middle .cards {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+}
+
+.Home .middle .cards .card {
+  width: 23%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Home .middle .cards .card p {
+  margin: 7px 10px;
+  font-size: 14px;
+}
+
+.SignUp {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  height: 90vh;
+}
+
+.SignUp img {
+  width: 300px;
+}
+
+.SignUp .left-bar {
+  padding: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.SignUp .left-bar .top {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.SignUp .left-bar p {
+  color: #575757;
+  margin: 10px 100px;
+  text-align: center;
+}
+
+.SignUp .main-signup {
+  margin: 10% auto;
+}
+
+.SignUp .main-signup h1 {
+  text-align: center;
+}
+
+.SignUp .main-signup .signup-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto 30px auto;
+  border-radius: 20px;
+}
+
+.SignUp .main-signup .signup-form button {
+  margin-top: 20px;
+}
+
+.Login {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  height: 90vh;
+}
+
+.Login img {
+  width: 300px;
+}
+
+.Login .left-bar {
+  padding: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Login .left-bar .top {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.Login .left-bar p {
+  color: #575757;
+  margin: 10px 100px;
+  text-align: center;
+}
+
+.Login .main-login {
+  margin: 10% auto;
+}
+
+.Login .main-login h1 {
+  text-align: center;
+}
+
+.Login .main-login .login-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 30px auto;
+  border-radius: 20px;
+}
+
+.Login .main-login .login-form button {
+  margin-top: 20px;
+}
+
+.selector-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+}
+
+.selector-container .selector button {
+  outline: none;
+  border: none;
+  background: #c8baff;
+  padding: 10px 20px;
+  color: #7654ff;
+}
+
+.selector-container .selector .left {
+  border-radius: 20px 0 0 20px;
+}
+
+.selector-container .selector .right {
+  border-radius: 0 20px 20px 0;
+}
+
+.selector-container .selector #selected {
+  background: #7654ff;
+  color: white;
+}
+
+.Cancer .container {
+  height: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Cancer .container h1,
+.Cancer .container h3 {
+  color: #ff5e5e;
+}
+
+.Cancer .container p {
+  margin-top: 20px;
+}
+
+.Cancer button {
+  background: #ff5e5e;
+}
+
+.Pneumonia .container {
+  height: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Pneumonia .container h1,
+.Pneumonia .container h3 {
+  color: #ffc56d;
+}
+
+.Pneumonia .container p {
+  margin-top: 20px;
+}
+
+.Pneumonia .container button {
+  background: #ffc56d;
+}
+
+.Medicine .container {
+  min-height: 70vh;
+  margin-bottom: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Medicine .container h1,
+.Medicine .container h3,
+.Medicine .container label {
+  color: #38b6ff;
+}
+
+.Medicine .container button {
+  background: #38b6ff;
+}
+
+.Medicine .container p {
+  margin-top: 20px;
+}
+
+.Medicine .container .top {
+  margin: 40px 0;
+}
+
+.Medicine .container .main {
+  border-radius: 20px;
+  padding: 30px;
+  -webkit-box-shadow: 0px 0px 24px -12px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 24px -12px rgba(0, 0, 0, 0.75);
+  width: 80%;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+}
+
+.Medicine .container .main .entered-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Medicine .container .main button {
+  margin: 20px 0;
+}
+
+.Medicine .container .main .commons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Medicine .container .main .commons label {
+  margin: 30px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.Medicine .container .main .commons table {
+  width: 100%;
+  text-align: left;
+}
+
+.Medicine .container .main .commons table th,
+.Medicine .container .main .commons table td {
+  padding: 10px;
+  border-bottom: 1px solid #38b6ff;
+}
+
+.Appointment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 50px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Appointment h1,
+.Appointment h3,
+.Appointment label {
+  color: #00ba4e;
+}
+
+.Appointment p {
+  margin-top: 20px;
+}
+
+.Appointment .main {
+  margin-top: 35px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.Appointment .appointment-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 30px auto;
+  border-radius: 20px;
+}
+
+.Appointment .appointment-form button {
+  margin-top: 20px;
+  background: #00ba4e;
+}
+
+.Appointment .cards {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Appointment .cards .card {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 70%;
+}
+
+.Appointment .cards .pres {
+  margin-top: 15px;
+  color: #00ba4e;
+  font-weight: 600;
+}
+
+.Appointment .cards .pres-cont {
+  margin: 0;
+}
+
+.Heart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 70px;
+}
+
+.Heart h1,
+.Heart h3,
+.Heart label {
+  color: #ff5e5e;
+}
+
+.Heart p {
+  margin-top: 20px;
+}
+
+.Heart .heart-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 30px auto;
+  border-radius: 20px;
+}
+
+.Heart .heart-form button {
+  margin-top: 20px;
+  background: #ff5e5e;
+}
+
+.Dashboard {
+  margin-bottom: 80px !important;
+  margin-bottom: 50px;
+}
+
+.Dashboard .card {
+  cursor: pointer;
+}
+
+.DashboardDoc {
+  margin-bottom: 80px;
+}
+
+.DashboardDoc .card {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: block;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.DashboardDoc .card .content {
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+
+.DashboardDoc .card .prescribe-input {
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.DashboardDoc button {
+  margin-top: 10px;
+  background: #7654ff;
+}
+
+.DashboardDoc .head {
+  color: #7654ff;
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 5px;
+}
+
+.DashboardDoc .prescribed {
+  margin-left: 5px;
+  color: #585858;
+}
+
+.DashboardDoc .edit-prescribe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.DashboardDoc .edit-prescribe img {
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 15px 0 7px 0;
+}
+
+.box .box1,
+.box .box2,
+.box .box3 {
+  width: 100px;
+  height: 4px;
+  background: #7654ff;
+  border-radius: 20px;
+  margin-left: 5px;
+}
+
+.box .box2 {
+  width: 30px;
+}
+
+.box .box3 {
+  width: 10px;
+}
+
+.Covid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 70px;
+}
+
+.Covid h1,
+.Covid h3,
+.Covid label {
+  color: #5271ff;
+}
+
+.Covid button {
+  background: #5271ff;
+}
+
+.Covid p {
+  margin-top: 20px;
+}
+
+.Covid .main {
+  margin-top: 35px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.Covid .plasma-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 30px auto;
+  border-radius: 20px;
+}
+
+.Covid .plasma-form button {
+  margin-top: 20px;
+}
+
+.Covid .cards {
+  margin-top: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+.Covid .cards .card {
+  width: 80%;
+}
+
+.Covid .cards .card .content {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  border-left: solid 1px #ff5e5e;
+}
+
+.Covid .cards .card .bg {
+  color: #ff5e5e;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 38px;
+}
+
+.Covid .cards .card p {
+  margin: 0;
+}
+
+.Covid .scroll-view {
+  margin-top: 50px;
+  height: 55vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, white), to(rgba(255, 255, 255, 0))), -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(70%, white)) 0 100%, radial-gradient(50% 0, farthest-side, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), radial-gradient(50% 100%, farthest-side, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)) 0 100%;
+  background: linear-gradient(white 30%, rgba(255, 255, 255, 0)), linear-gradient(rgba(255, 255, 255, 0), white 70%) 0 100%, radial-gradient(50% 0, farthest-side, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), radial-gradient(50% 100%, farthest-side, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)) 0 100%;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, white), to(rgba(255, 255, 255, 0))), -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(70%, white)) 0 100%, radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)) 0 100%;
+  background: linear-gradient(white 30%, rgba(255, 255, 255, 0)), linear-gradient(rgba(255, 255, 255, 0), white 70%) 0 100%, radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)) 0 100%;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+  /* Opera doesn't support this in the shorthand */
+  background-attachment: local, local, scroll, scroll;
+}
+
+.scroll-view::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 20px;
+}
+
+.scroll-view::-webkit-scrollbar-track {
+  border-radius: 20px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.scroll-view::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background-color: #5271ff;
+  width: 6px;
+}
+
+.Profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 50px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Profile h1,
+.Profile h3,
+.Profile label {
+  color: #7654ff;
+}
+
+.Profile p {
+  margin-top: 20px;
+}
+
+.Profile .main {
+  margin-top: 35px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.Profile .appointment-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 20px;
+  margin: 0 auto;
+}
+
+.Profile .appointment-form button {
+  margin-top: 20px;
+  background: #7654ff;
+}
+
+.Profile .cards {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Profile .cards .card {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 70%;
+}
+
+.Profile .cards .card .content {
+  color: #3b3b3b;
+}
+
+.Profile .cards .card .content .name {
+  color: #7654ff;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.Appointment .container,
+.Profile .container,
+.Covid .container {
+  width: 70%;
+}
+
+@media only screen and (max-width: 600px) {
+  .NavBar {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    padding: 10px 10%;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .NavBar h1 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .NavBar .links {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    justify-items: center;
+  }
+  .container {
+    margin: 30px 7%;
+  }
+  .card {
+    width: 100% !important;
+  }
+  .SignUp {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .SignUp .left-bar {
+    display: none;
+  }
+  .SignUp .main-signup {
+    margin: 50px auto;
+  }
+  .Login {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .Login .left-bar {
+    display: none;
+  }
+  .Login .main-signup {
+    margin: 50px auto;
+  }
+  .Home .top {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-gap: 40px;
+  }
+  .Home .top .left {
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  .Home .middle h2 {
+    text-align: center;
+  }
+  .Appointment .card {
+    text-align: center;
+  }
+  .DashboardDoc .card {
+    margin: 10px 0;
+  }
+  .main {
+    -ms-grid-columns: 1fr !important;
+        grid-template-columns: 1fr !important;
+  }
+  .plasma-submit {
+    margin-top: 80px;
+  }
+  .Appointment .container,
+  .Profile .container,
+  .Covid .container {
+    width: auto;
+  }
+}
+/*# sourceMappingURL=index.css.map */

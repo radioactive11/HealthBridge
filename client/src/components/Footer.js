@@ -4,8 +4,11 @@ const Footer = () => {
 	return (
 		<div className="Footer">
 			<div className="text">
-				Made with <span role="img">💖</span> by{" "}
-				<a href="#">eUreka Team</a>
+				Made with{" "}
+				<span role="img" aria-label="f" aria-labelledby="f">
+					💖
+				</span>{" "}
+				by <a href="/">Team Hack Overflow</a>
 			</div>
 		</div>
 	);

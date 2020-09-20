@@ -9,6 +9,7 @@ const NavBar = ({ history }) => {
 	const url = String(history.location.pathname);
 
 	const logOut = () => {
+		history.push("/");
 		setUser(null);
 		setToken(null);
 		localStorage.removeItem("user");
@@ -19,7 +20,7 @@ const NavBar = ({ history }) => {
 		<div className="NavBar">
 			<div className="logo">
 				<div onClick={() => history.push("/")}>
-					<h1>eUreka</h1>
+					<h1>HealthBridge</h1>
 				</div>
 			</div>
 			<div className="links">
