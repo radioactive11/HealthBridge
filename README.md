@@ -263,11 +263,11 @@ Contributions are what make the open source community such an amazing place to b
 <!-- CONTACT -->
 ## Contact
 
-Arijit Roy - [GitHub](https://github.com/radioactive11) - email@example.com
+Arijit Roy - [GitHub](https://github.com/radioactive11) - roy.arijit2001@gmail.com
 
-Kartik Goel - [GitHub](https://github.com/kg-kartik) - email@example.com
+Kartik Goel - [GitHub](https://github.com/kg-kartik) - goel.kartik39@gmail.com
 
-Aman Jagdev - [GitHub](https://github.com/amanjagdev) - email@example.com
+Aman Jagdev - [GitHub](https://github.com/amanjagdev) - amankumarjagdev@gmail.com
 
 Website: [https://eureka-web.vercel.app/medicine](https://eureka-web.vercel.app/)
 
