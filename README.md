@@ -39,16 +39,15 @@
 * [Usage](#usage)
 * [Roadmap](#roadmap)
 * [Contributing](#contributing)
-* [License](#license)
 * [Contact](#contact)
-* [Acknowledgements](#acknowledgements)
+
 
 
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](https://eureka-web.vercel.app)
 
 The aim of **Project HealthBridge** is to make the interaction of patients and doctors **seamless**, **convenient** and **more organized**. This platform is built keeping in mind the problems and hassles one has to face while using any medical facility via hospitals.
 
