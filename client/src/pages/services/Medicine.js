@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { useRecoilValue } from "recoil";
 import { tokenAtom } from "../../global/globalState";
 import Axios from "axios";
@@ -9,7 +9,7 @@ const Medicine = () => {
 	const [enteredName, setEnteredName] = useState("");
 	const [commonNames, setCommonNames] = useState(null);
 
-	const getBrandNames = () => {
+	const getBrandNames = useCallback(() => {
 		Axios.post(
 			`https://eureka-scrapper-radioactive11.herokuapp.com/generic_name`,
 			{
@@ -28,7 +28,7 @@ const Medicine = () => {
 			.catch((err) => {
 				console.log(err);
 			});
-	};
+	}, [enteredName, token]);
 
 	return (
 		<div className="Medicine">
@@ -51,10 +51,10 @@ const Medicine = () => {
 							onChange={(e) => setEnteredName(e.target.value)}
 						/>
 					</div>
-					<button className="primary" onClick={() => getBrandNames()}>
-						Parse
+					<button className="primary" onClick={getBrandNames}>
+						Get Results
 					</button>
-					{commonNames && (
+					{commonNames ? (
 						<div className="commons">
 							<label htmlFor="commons">Common Medicines</label>
 							<div className="result">
@@ -78,7 +78,7 @@ const Medicine = () => {
 								</table>
 							</div>
 						</div>
-					)}
+					) : null}
 				</div>
 			</div>
 		</div>
