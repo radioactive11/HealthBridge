@@ -52,7 +52,7 @@ const Medicine = () => {
 						/>
 					</div>
 					<button className="primary" onClick={() => getBrandNames()}>
-						Parse
+						Get Results
 					</button>
 					{commonNames && (
 						<div className="commons">
