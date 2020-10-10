@@ -2,6 +2,7 @@ import React from "react";
 import { withRouter } from "react-router-dom";
 import { useRecoilState } from "recoil";
 import { userAtom, tokenAtom } from "../global/globalState";
+import DarkToggle from "../components/darktoggle"
 
 const NavBar = ({ history }) => {
 	const [user, setUser] = useRecoilState(userAtom);
@@ -71,6 +72,7 @@ const NavBar = ({ history }) => {
 					</React.Fragment>
 				)}
 			</div>
+			<DarkToggle/>
 		</div>
 	);
 };

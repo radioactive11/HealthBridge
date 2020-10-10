@@ -76,7 +76,7 @@ const DashboardDoc = ({ history }) => {
 									{appointment.patient.substring(14)}
 								</div>
 								<div className="content">
-									<h4></h4>
+									<h4> </h4>
 									<p>Symptopms : {appointment.symptoms}</p>
 								</div>
 

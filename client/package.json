@@ -11,8 +11,11 @@
     "react-dom": "^16.13.1",
     "react-dropzone": "^11.1.0",
     "react-github-btn": "^1.2.0",
+    "react-icons": "^3.11.0",
+    "react-responsive": "^8.1.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
+    "react-toggle": "^4.1.1",
     "recoil": "^0.0.10",
     "recoil-logger": "^1.1.1"
   },
