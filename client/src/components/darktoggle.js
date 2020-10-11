@@ -7,24 +7,15 @@ import { BsSun } from "react-icons/bs";
 const DARK_CLASS = "dark";
 
 const DarkToggle = () => {
-  // const systemPrefersDark = useMediaQuery(
-  //   {
-  //     query: "(prefers-color-scheme: dark)"
-  //   },
-  //   undefined,
-  //   prefersDark => {
-  //     setIsDark(prefersDark);
-  //   }
-  // );
 
   const [isDark, setIsDark] = useState(false);
   
   useEffect(() => {
     try {
-      console.log("checking dark ls")
+      // console.log("checking dark ls")
       const dark = localStorage.getItem('prevState')
-      console.log('prevState', dark)
-      console.log("typeof dark",typeof(dark))
+      // console.log('prevState', dark)
+      // console.log("typeof dark",typeof(dark))
       if(dark != null) {
         setIsDark(dark==='true')
         if (dark) {
@@ -40,7 +31,7 @@ const DarkToggle = () => {
   }, [])
 
      useEffect(() => {
-      console.log("changin dark",isDark)
+      // console.log("changin dark",isDark)
        if (isDark) {
          document.documentElement.classList.add(DARK_CLASS)
        } else {
@@ -48,7 +39,7 @@ const DarkToggle = () => {
        }
      }, [isDark]);
 
-     console.log("isDark", isDark)
+    //  console.log("isDark", isDark)
 
   return (
 

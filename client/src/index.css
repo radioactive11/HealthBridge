@@ -1354,14 +1354,14 @@ button.primary {
   -webkit-box-shadow: 0px 0px 20px -8px rgba(47, 98, 240, 0.822);
   box-shadow: 0px 0px 20px -8px rgba(47, 98, 240, 0.822);
 }
-.dark .links{
+.dark .links,.dark .cards .card .content h4{
   color: #bfb1f5;
   border-bottom: none;
 }
 .dark .App{
   background-color:#030c30;
 }
-.dark .welcome,.dark .SignUp .main-signup h1,.dark .Login .main-login h1{
+.dark .welcome,.dark .SignUp .main-signup h1,.dark .Login .main-login h1,.dark .container h1,.dark .container h3,.dak .prescription p{
   color: #95c9e7;
 }
 
@@ -1371,7 +1371,7 @@ button.primary {
   -webkit-box-shadow: 0px 0px 24px -12px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 24px -12px rgba(0, 0, 0, 0.75);
 }
-.dark .cards .card .content p,.dark p{
+.dark .cards .card .content p,.dark p,.dark .appointment-info .cards .card .content h4{
   color: whitesmoke;
 }
 .dark .Footer{
@@ -1384,6 +1384,10 @@ button.primary {
   background-color:#030c30 ; 
   margin-top: 15px;
 }
-.dark .SignUp .left-bar p{
+.dark .SignUp .left-bar p,.dark .Login .left-bar p,.dark .more-details,.dark .card .email,.dark .container .content{
   color: whitesmoke;
+}
+
+.dark .dropzone{
+  color: #435e66b4;
 }
