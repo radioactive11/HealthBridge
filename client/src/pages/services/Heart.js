@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import Axios from "axios";
-// import { useRecoilValue } from "recoil";
-// import { tokenAtom } from "../../global/globalState";
+import { useRecoilValue } from "recoil";
+import { tokenAtom } from "../../global/globalState";
 
 const Cancer = () => {
-	// const token = useRecoilValue(tokenAtom);
+	const token = useRecoilValue(tokenAtom);
 	const [result, setResult] = useState(null);
 
 	const [age, setAge] = useState(null);
