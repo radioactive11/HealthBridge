@@ -1391,3 +1391,8 @@ button.primary {
 .dark .dropzone{
   color: #435e66b4;
 }
+
+.dark input,.dark select{
+  color: whitesmoke;
+  background-color: #000518;
+}
