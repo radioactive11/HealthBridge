@@ -7,6 +7,8 @@
 
 .App {
   background: white;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
 .logo h1 {
@@ -146,8 +148,8 @@ button.primary {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -ms-grid-columns: 3fr 1fr;
-  grid-template-columns: 3fr 1fr;
+  -ms-grid-columns: 8fr 2fr 1fr;
+  grid-template-columns: 8fr 2fr 1fr;
   -webkit-box-shadow: 0px 0px 24px -12px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 24px -12px rgba(0, 0, 0, 0.75);
 }
@@ -1176,4 +1178,221 @@ button.primary {
 .margin-left {
   margin-left: 16px;
 }
+
+.DarkToggle{
+  left: 15vw;
+}
+.react-toggle {
+  touch-action: pan-x;
+
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.react-toggle-screenreader-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.react-toggle--disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.25s;
+  transition: opacity 0.25s;
+}
+
+.react-toggle-track {
+  display: flex;
+  width: 50px;
+  height: 24px;
+  padding: 0;
+  border-radius: 30px;
+  background-color: #4D4D4D;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
+  background-color: #0c3b79;
+}
+
+.react-toggle .react-toggle-track {
+  background-color: #2f7df1;
+}
+
+.react-toggle--checked .react-toggle-track {
+  background-color: #100449;
+}
+
+.react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
+  background-color: #080322;
+}
+
+.react-toggle-track-check {
+  position: absolute;
+  width: 14px;
+  height: 10px;
+  top: 0px;
+  bottom: 3.5px;
+  margin-top: auto;
+  margin-bottom: auto;
+  line-height: 0;
+  left: 8px;
+  opacity: 0;
+  -webkit-transition: opacity 0.25s ease;
+  -moz-transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease;
+}
+
+.react-toggle--checked .react-toggle-track-check {
+  opacity: 1;
+  -webkit-transition: opacity 0.25s ease;
+  -moz-transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease;
+}
+
+.react-toggle-track-x {
+  position: absolute;
+  width: 14px;
+  height: 10px;
+  top: 0px;
+  bottom: 3.5px;
+  margin-top: auto;
+  margin-bottom: auto;
+  left: 30px;
+  line-height: 0;
+  opacity: 1;
+  -webkit-transition: opacity 0.25s ease;
+  -moz-transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease;
+}
+
+.react-toggle--checked .react-toggle-track-x {
+  opacity: 0;
+}
+
+.react-toggle-thumb {
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #4D4D4D;
+  border-radius: 50%;
+  background-color: #4D4D4D;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.react-toggle--checked .react-toggle-thumb {
+  left: 27px;
+  border-color: #33a1cc;
+}
+
+/* .react-toggle--focus .react-toggle-thumb {
+  -webkit-box-shadow: 0px 0px 3px 2px #0099E0;
+  -moz-box-shadow: 0px 0px 3px 2px #0099E0;
+  box-shadow: 0px 0px 2px 3px #0099E0;
+} */
+
+.react-toggle:active:not(.react-toggle--disabled) .react-toggle-thumb {
+  -webkit-box-shadow: 0px 0px 5px 5px #0099E0;
+  -moz-box-shadow: 0px 0px 5px 5px #0099E0;
+  box-shadow: 0px 0px 5px 5px #0099E0;
+}
+
+/* .react-toggle--focus .react-toggle-thumb {
+  -webkit-box-shadow: 0px 0px 3px 2px #0099E0;
+  -moz-box-shadow: 0px 0px 3px 2px #0099E0;
+  box-shadow: 0px 0px 2px 3px #0099E0;
+} */
+
+.react-toggle:active:not(.react-toggle--disabled) .react-toggle-thumb {
+  -webkit-box-shadow: 0px 0px 5px 5px #0099E0;
+  -moz-box-shadow: 0px 0px 5px 5px #0099E0;
+  box-shadow: 0px 0px 5px 5px #0099E0;
+}
 /*# sourceMappingURL=index.css.map */
+
+/* @media (prefers-color-scheme: dark) {
+  dark theme styles go here
+  
+} */
+.dark {
+  background-color: #030c30 ;
+}
+.dark .NavBar{
+  background-color: #020a27;
+  -webkit-box-shadow: 0px 0px 20px -8px rgba(47, 98, 240, 0.822);
+  box-shadow: 0px 0px 20px -8px rgba(47, 98, 240, 0.822);
+}
+.dark .links,.dark .cards .card .content h4{
+  color: #bfb1f5;
+  border-bottom: none;
+}
+.dark .App{
+  background-color:#030c30;
+}
+.dark .welcome,.dark .SignUp .main-signup h1,.dark .Login .main-login h1,.dark .container h1,.dark .container h3,.dak .prescription p{
+  color: #95c9e7;
+}
+
+.dark .card{
+  background-color: #041558;
+  color: #8a1de4;
+  -webkit-box-shadow: 0px 0px 24px -12px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 24px -12px rgba(0, 0, 0, 0.75);
+}
+.dark .cards .card .content p,.dark p,.dark .appointment-info .cards .card .content h4{
+  color: whitesmoke;
+}
+.dark .Footer{
+  background-color: #020a27;
+  color: whitesmoke;
+  -webkit-box-shadow: 0px 0px 15px -5px rgba(47, 98, 240, 0.822);
+  box-shadow: 0px 0px 15px -5px rgba(47, 98, 240, 0.822);
+}
+.dark .left-bar{
+  background-color:#030c30 ; 
+  margin-top: 15px;
+}
+.dark .SignUp .left-bar p,.dark .Login .left-bar p,.dark .more-details,.dark .card .email,.dark .container .content{
+  color: whitesmoke;
+}
+
+.dark .dropzone{
+  color: #435e66b4;
+}
+
+.dark input,.dark select{
+  color: whitesmoke;
+  background-color: #000518;
+}
